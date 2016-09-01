@@ -16812,7 +16812,7 @@ h3.page-header {
 [ 7. Navigation ]
 */
 .header-bottom {
-background-color: #e4efe4;
+background-color: #4d5d4d;
     box-shadow: 0px 1px 0px #e9e9e9;
     position: relative;
     z-index: 9;  }
@@ -16835,7 +16835,8 @@ background-color: #e4efe4;
       .header-nav li a {
         border-bottom: 2px solid transparent;
         border-radius: 0px;
-         color: #363636;
+        font-weight:900;
+         color: #fff;
         display: block;
         font-size: 13px; }
         .header-nav li a:active, .header-nav li a:focus, .header-nav li a:hover {
@@ -16867,7 +16868,7 @@ background-color: #e4efe4;
       padding: 10px 0px;
       position: absolute;
       opacity: 0;
-      top: 68px;
+      top: 45px;
       visibility: hidden;
       width: 190px;
       z-index: 10; }
