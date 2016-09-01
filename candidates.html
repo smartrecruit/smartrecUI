@@ -1,0 +1,412 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" type="text/css">
+    <link href="assets/css/style.css" rel="stylesheet" type="text/css">
+    <link href="assets/libraries/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="assets/libraries/bootstrap-fileinput/css/fileinput.min.css" rel="stylesheet" type="text/css">
+    <link href="assets/libraries/bootstrap-select/css/bootstrap-select.min.css" rel="stylesheet" type="text/css">
+    <link href="assets/libraries/bootstrap-wysiwyg/bootstrap-wysiwyg.min.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/black-green.css" rel="stylesheet" type="text/css" id="style-primary">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/favicon.png">
+
+    <title>Smart Recruit - Candidates</title>
+	    <!--<style>
+        .header-top {
+            border-bottom: 2px solid #4c953f;
+            margin-bottom: 3px;
+        }
+
+        .header-bottom {
+            border-bottom: 2px solid #4c953f;
+        }
+    </style>-->
+
+    <style type="text/css">
+        @media only screen and (max-width: 480px) {
+            .header-top {
+                padding: 20px 0px !important;
+            }
+        }
+    </style>
+</head>
+
+<body class="hero-content-dark footer-dark">
+    <div class="page-wrapper">
+        <div class="header-wrapper">
+            <div class="header">
+                <div class="header-top" style="padding:0px 0px;">
+                    <div class="container">
+                        <div class="header-brand">
+                            <div class="header-logo">
+                                <a href="index.html">
+                                    <i class="#logo"></i>
+                                    <span class="header-logo-text">Smart <span class="header-logo-highlight">Recruit</span></span>
+                                </a>
+                            </div><!-- /.header-logo-->
+                            <div class="header-slogan">
+                                <span class="header-slogan-slash">/</span>
+                                <span class="header-slogan-text"><i>Makes You Smart</i></span>
+                            </div><!-- /.header-slogan-->
+                        </div><!-- /.header-brand -->
+                        <ul class="header-actions nav nav-pills">
+                            <li><a href="#"><i class="fa fa-user" style="font-size:14px;"></i>&nbsp;&nbsp;User</a></li>
+                            <li><a href="index.html" class="primary">Logout</a></li>
+                        </ul><!-- /.header-actions -->
+                        <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".header-nav">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    </div><!-- /.container -->
+                </div><!-- /.header-top -->
+                <div class="header-bottom">
+                    <div class="container">
+                        <ul class="header-nav nav nav-pills collapse">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="candidates.html">Candidates List</a></li>
+														<li>
+                                <a href="evaluator.html">Evaluator</a>
+                            </li>
+                        </ul>
+                    </div><!-- /.container -->
+                </div><!-- /.header-bottom -->
+            </div><!-- /.header -->
+        </div><!-- /.header-wrapper-->
+
+        <div class="main-wrapper">
+            <div class="main" style="padding-top: 20px;">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-9">
+                            <h2 class="page-header">Find your matching candidates</h2>
+                            <div class="candidates-list">
+
+                                <div class="candidates-list-item">
+                                    <div class="candidates-list-item-heading">
+                                        <div class="candidates-list-item-image">
+                                            <a href="#">
+                                                <img src="assets/img/tmp/resume.jpg" alt="Elliot Sarah Scott">
+                                            </a>
+
+                                            <a href="#" class="candidates-list-item-image-label">
+                                                <img src="assets/img/tmp/instagram.png" alt="">
+                                            </a>
+
+                                        </div><!-- /.candidates-list-item-image -->
+                                        <div class="candidates-list-item-title">
+                                            <h2><a href="resume.html">Elliot Sarah Scott</a></h2>
+                                            <h3>Data Analytist</h3>
+                                        </div><!-- /.candidates-list-item-title -->
+                                    </div><!-- /.candidates-list-item-heading -->
+                                    <div class="candidates-list-item-location">
+                                        <i class="fa fa-map-marker"></i> Chennai, Bangalore
+                                    </div><!-- /.candidates-list-item-location -->
+                                    <div class="candidates-list-item-profile">
+                                        <span class="candidates-list-item-profile-count">92% completed</span>
+                                        <span class="candidates-list-item-profile-bar"><span style="width: 92%"></span></span>
+                                    </div><!-- /.candidates-list-item-rating -->
+                                </div><!-- /.candidates-list-item -->
+
+                                <div class="candidates-list-item">
+                                    <div class="candidates-list-item-heading">
+                                        <div class="candidates-list-item-image">
+                                            <a href="#">
+                                                <img src="assets/img/tmp/resume-1.jpg" alt="Peter Ruck">
+                                            </a>
+
+                                        </div><!-- /.candidates-list-item-image -->
+                                        <div class="candidates-list-item-title">
+                                            <h2><a href="resume.html">Peter Ruck</a></h2>
+                                            <h3>Java Developer</h3>
+                                        </div><!-- /.candidates-list-item-title -->
+                                    </div><!-- /.candidates-list-item-heading -->
+                                    <div class="candidates-list-item-location">
+                                        <i class="fa fa-map-marker"></i> New York City, New York
+                                    </div><!-- /.candidates-list-item-location -->
+                                    <div class="candidates-list-item-profile">
+                                        <span class="candidates-list-item-profile-count">68% completed</span>
+                                        <span class="candidates-list-item-profile-bar"><span style="width: 68%"></span></span>
+                                    </div><!-- /.candidates-list-item-rating -->
+                                </div><!-- /.candidates-list-item -->
+
+                                <div class="candidates-list-item">
+                                    <div class="candidates-list-item-heading">
+                                        <div class="candidates-list-item-image">
+                                            <a href="#">
+                                                <img src="assets/img/tmp/resume-2.jpg" alt="Linda Young">
+                                            </a>
+
+                                            <a href="#" class="candidates-list-item-image-label">
+                                                <img src="assets/img/tmp/dropbox.png" alt="">
+                                            </a>
+
+                                        </div><!-- /.candidates-list-item-image -->
+                                        <div class="candidates-list-item-title">
+                                            <h2><a href="resume.html">Linda Young</a></h2>
+                                            <h3>PR Manager</h3>
+                                        </div><!-- /.candidates-list-item-title -->
+                                    </div><!-- /.candidates-list-item-heading -->
+                                    <div class="candidates-list-item-location">
+                                        <i class="fa fa-map-marker"></i> Chicago, Michigan
+                                    </div><!-- /.candidates-list-item-location -->
+                                    <div class="candidates-list-item-profile">
+                                        <span class="candidates-list-item-profile-count">78% completed</span>
+                                        <span class="candidates-list-item-profile-bar"><span style="width: 78%"></span></span>
+                                    </div><!-- /.candidates-list-item-rating -->
+                                </div><!-- /.candidates-list-item -->
+
+                                <div class="candidates-list-item">
+                                    <div class="candidates-list-item-heading">
+                                        <div class="candidates-list-item-image">
+                                            <a href="#">
+                                                <img src="assets/img/tmp/resume-3.jpg" alt="Britney Doe">
+                                            </a>
+
+                                        </div><!-- /.candidates-list-item-image -->
+                                        <div class="candidates-list-item-title">
+                                            <h2><a href="resume.html">Britney Doe</a></h2>
+                                            <h3>Data Mining</h3>
+                                        </div><!-- /.candidates-list-item-title -->
+                                    </div><!-- /.candidates-list-item-heading -->
+                                    <div class="candidates-list-item-location">
+                                        <i class="fa fa-map-marker"></i> Philadelphia, Pennsylvania
+                                    </div><!-- /.candidates-list-item-location -->
+                                    <div class="candidates-list-item-profile">
+                                        <span class="candidates-list-item-profile-count">82% completed</span>
+                                        <span class="candidates-list-item-profile-bar"><span style="width: 82%"></span></span>
+                                    </div><!-- /.candidates-list-item-rating -->
+                                </div><!-- /.candidates-list-item -->
+
+                                <div class="candidates-list-item">
+                                    <div class="candidates-list-item-heading">
+                                        <div class="candidates-list-item-image">
+                                            <a href="#">
+                                                <img src="assets/img/tmp/resume-4.jpg" alt="Andrew Man">
+                                            </a>
+
+                                            <a href="#" class="candidates-list-item-image-label">
+                                                <img src="assets/img/tmp/airbnb.png" alt="">
+                                            </a>
+
+                                        </div><!-- /.candidates-list-item-image -->
+                                        <div class="candidates-list-item-title">
+                                            <h2><a href="resume.html">Andrew Man</a></h2>
+                                            <h3>Python Developer</h3>
+                                        </div><!-- /.candidates-list-item-title -->
+                                    </div><!-- /.candidates-list-item-heading -->
+                                    <div class="candidates-list-item-location">
+                                        <i class="fa fa-map-marker"></i> Denver, Colorado
+                                    </div><!-- /.candidates-list-item-location -->
+                                    <div class="candidates-list-item-profile">
+                                        <span class="candidates-list-item-profile-count">70% completed</span>
+                                        <span class="candidates-list-item-profile-bar"><span style="width: 70%"></span></span>
+                                    </div><!-- /.candidates-list-item-rating -->
+                                </div><!-- /.candidates-list-item -->
+
+                                <div class="candidates-list-item">
+                                    <div class="candidates-list-item-heading">
+                                        <div class="candidates-list-item-image">
+                                            <a href="#">
+                                                <img src="assets/img/tmp/resume.jpg" alt="Elliot Sarah Scott">
+                                            </a>
+
+                                            <a href="#" class="candidates-list-item-image-label">
+                                                <img src="assets/img/tmp/instagram.png" alt="">
+                                            </a>
+
+                                        </div><!-- /.candidates-list-item-image -->
+                                        <div class="candidates-list-item-title">
+                                            <h2><a href="resume.html">Elliot Sarah Scott</a></h2>
+                                            <h3>Data Analytist</h3>
+                                        </div><!-- /.candidates-list-item-title -->
+                                    </div><!-- /.candidates-list-item-heading -->
+                                    <div class="candidates-list-item-location">
+                                        <i class="fa fa-map-marker"></i> San Francisco, California
+                                    </div><!-- /.candidates-list-item-location -->
+                                    <div class="candidates-list-item-profile">
+                                        <span class="candidates-list-item-profile-count">92% completed</span>
+                                        <span class="candidates-list-item-profile-bar"><span style="width: 92%"></span></span>
+                                    </div><!-- /.candidates-list-item-rating -->
+                                </div><!-- /.candidates-list-item -->
+
+                                <div class="candidates-list-item">
+                                    <div class="candidates-list-item-heading">
+                                        <div class="candidates-list-item-image">
+                                            <a href="#">
+                                                <img src="assets/img/tmp/resume-1.jpg" alt="Peter Ruck">
+                                            </a>
+
+                                        </div><!-- /.candidates-list-item-image -->
+                                        <div class="candidates-list-item-title">
+                                            <h2><a href="resume.html">Peter Ruck</a></h2>
+                                            <h3>Java Developer</h3>
+                                        </div><!-- /.candidates-list-item-title -->
+                                    </div><!-- /.candidates-list-item-heading -->
+                                    <div class="candidates-list-item-location">
+                                        <i class="fa fa-map-marker"></i> New York City, New York
+                                    </div><!-- /.candidates-list-item-location -->
+                                    <div class="candidates-list-item-profile">
+                                        <span class="candidates-list-item-profile-count">68% completed</span>
+                                        <span class="candidates-list-item-profile-bar"><span style="width: 68%"></span></span>
+                                    </div><!-- /.candidates-list-item-rating -->
+                                </div><!-- /.candidates-list-item -->
+
+                            </div><!-- /.candidates-list -->
+                            <div class="center">
+                                <ul class="pagination">
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-chevron-left"></i>
+                                        </a>
+                                    </li>
+                                    <li><a href="#">1</a></li>
+                                    <li><a href="#">2</a></li>
+                                    <li class="active"><a href="#">3</a></li>
+                                    <li><a href="#">4</a></li>
+                                    <li><a href="#">5</a></li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-chevron-right"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div><!-- /.center -->
+                        </div><!-- /.col-* -->
+                        <div class="col-sm-3">
+                            <div class="filter-stacked">
+                                <form method="post" action="#candidates.html?">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="Keyword">
+                                    </div>
+                                    <h3>Salary <a href="#"><i class="fa fa-close"></i></a></h3>
+                                    <div class="split-forms">
+                                        <div class="form-group">
+                                            <input type="number" class="form-control" placeholder="Min.">
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="number" class="form-control" placeholder="Max.">
+                                        </div>
+                                    </div><!-- /.split-forms -->
+                                    <h3>Contract <a href="#"><i class="fa fa-close"></i></a></h3>
+                                    <div class="checkbox">
+                                        <label><input type="checkbox"> Full-time</label>
+                                    </div><!-- /.checkbox -->
+                                    <div class="checkbox">
+                                        <label><input type="checkbox"> Part-time</label>
+                                    </div><!-- /.checkbox -->
+                                    <div class="checkbox">
+                                        <label><input type="checkbox"> One-time project</label>
+                                    </div><!-- /.checkbox -->
+                                    <a href="#" class="filter-stacked-show-more">Show More ...</a>
+                                    <h3>Location <a href="#"><i class="fa fa-close"></i></a></h3>
+                                    <div class="checkbox">
+                                        <label><input type="radio" name="radio-test" value="1"> Chennai</label>
+                                    </div><!-- /.checkbox -->
+                                    <div class="checkbox">
+                                        <label><input type="radio" name="radio-test" value="2"> Mumbai</label>
+                                    </div><!-- /.checkbox -->
+                                    <div class="checkbox">
+                                        <label><input type="radio" name="radio-test" value="3"> Bangalore</label>
+                                    </div><!-- /.checkbox -->
+                                    <a href="#" class="filter-stacked-show-more">Show More ...</a>
+                                    <h3>Status <a href="#"><i class="fa fa-close"></i></a></h3>
+                                    <div class="checkbox">
+                                        <label><input type="checkbox"> Most Recent</label>
+                                    </div><!-- /.checkbox -->
+                                    <div class="checkbox">
+                                        <label><input type="checkbox"> Featured</label>
+                                    </div><!-- /.checkbox -->
+                                    <div class="checkbox">
+                                        <label><input type="checkbox"> Urgent</label>
+                                    </div><!-- /.checkbox -->
+                                    <a href="#" class="filter-stacked-show-more">Show More ...</a>
+                                    <button type="submit" class="btn btn-secondary btn-block"><i class="fa fa-refresh"></i> Reset Filter</button>
+                                </form>
+                            </div><!-- /.filter-stacked -->
+                        </div><!-- /.col-* -->
+                    </div><!-- /.row -->
+                </div><!-- /.container -->
+            </div><!-- /.main -->
+        </div><!-- /.main-wrapper -->
+
+
+        <div class="footer-wrapper">
+            <div class="footer">
+                <div class="footer-top">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-5">
+                                <div class="footer-top-block">
+                                    <h2><i class="#logo"></i> Smart Recruit</h2>
+                                    <p>
+                                        Well trusted and verified organisations all around the world are using our job platform to find best employees.
+                                    </p>
+                                    <ul class="social-links">
+                                        <li><a href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                                        <li><a href="https://twitter.com/" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                                        <li><a href="https://www.linkedin.com/" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+                                    </ul>
+                                </div><!-- /.footer-top-block -->
+                            </div><!-- /.col-* -->
+                            <div class="col-sm-3 col-sm-offset-1">
+                                <div class="footer-top-block">
+                                    <h2>Helpful Links</h2>
+                                    <ul>
+                                        <li><a href="#">About Us</a></li>
+                                        <li><a href="#">Support</a></li>
+                                        <li><a href="#">Terms &amp; Conditions</a></li>
+                                        <li><a href="#">Contact</a></li>
+                                    </ul>
+                                </div><!-- /.footer-top-block -->
+                            </div><!-- /.col-* -->
+                            <div class="col-sm-3">
+                                <div class="footer-top-block">
+                                    <h2>Trending Jobs</h2>
+                                    <ul>
+                                        <li><a href="#">Android Developer</a></li>
+                                        <li><a href="#">Senior Teamleader</a></li>
+                                        <li><a href="#">iOS Developer</a></li>
+                                        <li><a href="#">Node.js Developer</a></li>
+                                    </ul>
+                                </div><!-- /.footer-top-left -->
+                            </div><!-- /.col-* -->
+                        </div><!-- /.row -->
+                    </div><!-- /.container -->
+                </div><!-- /.footer-top -->
+                <div class="footer-bottom">
+                    <div class="container">
+                        <div class="footer-bottom-left">
+                            &copy; <a href="#">Smart Recruit</a>, 2016 All rights reserved.
+                        </div><!-- /.footer-bottom-left -->
+                        <div class="footer-bottom-right">
+                            Created by <a href="http://vts.in/" target="_blank">VTS</a>
+                        </div><!-- /.footer-bottom-right -->
+                    </div><!-- /.container -->
+                </div><!-- /.footer-bottom -->
+            </div><!-- /.footer -->
+        </div><!-- /.footer-wrapper -->
+
+
+    </div><!-- /.page-wrapper -->
+
+    <script type="text/javascript" src="assets/js/jquery.js"></script>
+    <script type="text/javascript" src="assets/js/jquery.ezmark.js"></script>
+    <script type="text/javascript" src="assets/libraries/bootstrap-sass/javascripts/bootstrap/collapse.js"></script>
+    <script type="text/javascript" src="assets/libraries/bootstrap-sass/javascripts/bootstrap/dropdown.js"></script>
+    <script type="text/javascript" src="assets/libraries/bootstrap-sass/javascripts/bootstrap/tab.js"></script>
+    <script type="text/javascript" src="assets/libraries/bootstrap-sass/javascripts/bootstrap/transition.js"></script>
+    <script type="text/javascript" src="assets/libraries/bootstrap-fileinput/js/fileinput.min.js"></script>
+    <script type="text/javascript" src="assets/libraries/bootstrap-select/js/bootstrap-select.min.js"></script>
+    <script type="text/javascript" src="assets/libraries/bootstrap-wysiwyg/bootstrap-wysiwyg.min.js"></script>
+    <script type="text/javascript" src="assets/libraries/cycle2/jquery.cycle2.min.js"></script>
+    <script type="text/javascript" src="assets/libraries/cycle2/jquery.cycle2.carousel.min.js"></script>
+    <script type="text/javascript" src="assets/libraries/countup/countup.min.js"></script>
+    <script type="text/javascript" src="assets/js/main.js"></script>
+
+</body>
+</html>
