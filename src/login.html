@@ -1,0 +1,86 @@
+
+
+<div class="document-title" ng-controller="LoginController" style="padding-top: 34px; color: black !important;margin-bottom: 0px !important; ">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12 col-sm-12 text-center"><h2>Say Hello to Smart Eval Job Portal Smart Recruit</h2></div>
+
+			<div class="clearfix"></div>
+			<br /><br />
+			<div class="col-sm-6 col-md-6">
+				<h2>Smart Eval</h2>
+				<p style="font-size:14px;">Well trusted and verified organisations all around the world are using our job platform to find best employees.</p>
+				<br />
+
+			</div><!-- /.col-* -->
+			<div class="col-sm-6 col-md-6"  id="LoginForm" ng-show='IsvisibleLogin'>
+				<form>
+					<div class="form-group">
+						<label for="form-login-username">User Name</label>
+						<input type="text" class="form-control" id="form-login-username" data-ng-model="accountLogin.username">
+					</div><!-- /.form-group -->
+					<div class="form-group">
+						<label for="form-login-password">Password</label>
+						<input type="password" class="form-control" id="form-login-password" data-ng-model="accountLogin.password">
+					</div><!-- /.form-group -->
+					<div class="checkbox">
+						<label><input type="checkbox" data-ng-model="accountLogin.keepsign"> Keep me signed in</label>
+						<a style="cursor:pointer;" id="btnForgot" class="link-not-important pull-right" data-ng-click='ForgotPassword()'>Forgot Password</a>
+					</div><!-- /.checkbox -->
+					<div class="form-group">
+						<button type="button" id="btnSignIn" class="btn btn-secondary btn-block"   data-ng-click="LoginAccount(accountLogin)">Sign in</button>
+				<center><div style="color:red;">{{err_login}}</div><//center>
+				
+					</div><!-- /.form-group -->
+					
+					<hr>
+
+					<div class="row">
+						<div class="col-xs-6 col-sm-6">
+							<a class="btn btn-facebook btn-block"><i class="fa fa-google"></i> Gmail</a>
+						</div><!-- /.col-sm-6 -->
+
+						<div class="col-xs-6 col-sm-6">
+							<a class="btn btn-linkedin btn-block"><i class="fa fa-linkedin"></i> LinkedIn</a>
+						</div><!-- /.col-sm-6 -->
+					</div><!-- /.row -->
+					
+					<div class="text-center">
+						<hr>
+						<p> Don't have an account? <a data-ng-click="btnSignup()" id="btnsignup" style="cursor:pointer;">Sign up</a> </p>
+						<hr>
+					</div>
+					
+				</form>
+			</div><!-- /.col-* -->
+			
+			<div class="col-sm-6 col-md-6" id="ForgotForm" ng-show='IsvisibleForgotPwd'>
+				<form>
+				<h4>Forgot your password?</h4>
+				<hr/>
+					<div class="form-group">
+						<label for="form-login-username">Email Id</label>
+						<input type="text" class="form-control" id="form-login-username" data-ng-model="forgotPassword.email">
+					</div><!-- /.form-group -->
+					<div class="form-group">
+						<button type="button" id="btnSendEmail" class="btn btn-secondary btn-block" data-ng-click='SendMail()'>Send email</button>
+					</div><!-- /.form-group -->
+					<div class="text-center">
+						<hr>
+						<p> Please provide the email address that you used when you signed up for your Smart Recruit account.
+							We will send you an email that will allow you to reset your password. </p>
+						<hr>
+					</div>
+				</form>
+			</div><!-- /.col-* -->
+			
+		</div><!-- /.row -->
+	</div><!-- /.container -->
+</div><!-- /.hero-content -->
+
+ <script type="text/javascript" src="assets/js/jquery.js"></script>
+<script type="text/javascript" src="assets/js/jquery.ezmark.js"></script>
+<script type="text/javascript" src="assets/libraries/bootstrap-fileinput/js/fileinput.min.js"></script>
+<script type="text/javascript" src="assets/libraries/bootstrap-select/js/bootstrap-select.min.js"></script>
+<script type="text/javascript" src="assets/libraries/bootstrap-wysiwyg/bootstrap-wysiwyg.min.js"></script>
+<script type="text/javascript" src="assets/js/main.js"></script>
