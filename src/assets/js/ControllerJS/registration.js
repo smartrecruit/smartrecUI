@@ -57,7 +57,6 @@ myapp.controller("RegistrationController",function($scope, $http,$location){
 				if(accountRegistration.username && accountRegistration.email && accountRegistration.password && accountRegistration.rePassword && accountRegistration.firstName && accountRegistration.surname){
 					$scope.errorMessage="";				
 					var data = {
-				username:accountRegistration.username,
 						firstname:accountRegistration.firstName,
 						lastname:accountRegistration.surname,
 						emailid:accountRegistration.email,

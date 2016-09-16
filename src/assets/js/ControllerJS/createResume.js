@@ -1,4 +1,4 @@
-myapp.controller('CreateResumeController', function($scope, $location, $anchorScroll) {
+myapp.controller('CreateResumeController', function($scope,$http, $location, $anchorScroll) {
  
   $scope.Clone=function(event){
 	var childDiv = angular.element( document.querySelector( '#test1' ) );
@@ -74,11 +74,11 @@ myapp.controller('CreateResumeController', function($scope, $location, $anchorSc
   
   
   $scope.SaveProfile=function(createProfile){
-	  alert("123");
-	  $scope.ChechFileValid($scope.SelectedFileForUpload);
-	  $scope.CheckResumeValid($scope.UploadedResume);
+	 // $scope.ChechFileValid($scope.SelectedFileForUpload);
+	 // $scope.CheckResumeValid($scope.UploadedResume);
 	  
-	  if ($scope.IsFileValid &&  $scope.isValidResume) {
+	 // if ($scope.IsFileValid &&  $scope.isValidResume) {
+		  /*
 		var data = {
 			id:1711,
 			firstname:createProfile.basicInfo.firstName,
@@ -116,9 +116,20 @@ myapp.controller('CreateResumeController', function($scope, $location, $anchorSc
 			toyear:createProfile.education.toYear,
 			edushortdescription:createProfile.education.eduShortDescription
 		};
+		*/
 		//http://localhost:3000/evaluators/removeEvaluator/567  \\\\\\\\\ Delete the record \\\\\\\\\\\\\\\\\
-		
-		$http.post('http://localhost:3000/evaluators/register', data) 
+
+		/////////////////////////////// Contat Details Update ///////////////////
+		var data = {
+			emailid:createProfile.contactInfo.email,
+			country:createProfile.contactInfo.country,
+			city:createProfile.contactInfo.city,
+			address:createProfile.contactInfo.address,
+			phoneno:createProfile.contactInfo.phone,
+			zipcode:createProfile.contactInfo.zipcode,
+			approved:'yes'
+				};
+		$http.post('http://localhost:3000/evaluators/contactinfo', data) 
 			.success(
 				function(success){
 					console.log(success);
@@ -127,8 +138,93 @@ myapp.controller('CreateResumeController', function($scope, $location, $anchorSc
 				function(error){
 					console.log(error);
 				});
-					 
-	  }
+		////////////////////////////////////////////////////////////////////////////////	
+		/////////////////////////////// Summary ///////////////////
+		var data = {
+			emailid:createProfile.contactInfo.email,
+			summary:createProfile.summary.notes,
+			approved:'yes'
+				};
+		$http.post('http://localhost:3000/evaluators/summaryinfo', data) 
+			.success(
+				function(success){
+					console.log(success);
+				})
+			.error(
+				function(error){
+					console.log(error);
+				});
+		////////////////////////////////////////////////////////////////////////////////
+		/////////////////////////////// Key Skills ///////////////////
+		var data = {
+			emailid:createProfile.contactInfo.email,
+			industry:createProfile.keySkills.industry,
+			functionalarea:createProfile.keySkills.functionalArea,
+			specialization:createProfile.keySkills.specialization,
+			approved:'yes'
+				};
+		$http.post('http://localhost:3000/evaluators/profilekeyskills', data) 
+			.success(
+				function(success){
+					console.log(success);
+				})
+			.error(
+				function(error){
+					console.log(error);
+				});
+		////////////////////////////////////////////////////////////////////////////////
+        /////////////////////////////// Experience ///////////////////
+
+		//currentemployer:createProfile.experience.currentEmployer,
+		//previousemployer:createProfile.experience.prevEmployer,
+			//fromdate:createProfile.experience.fromDate,
+			//todate:createProfile.experience.toDate,
+		var data = {
+			emailid:createProfile.contactInfo.email,
+		    organization:createProfile.experience.organizationName,
+			currentemployer:'yes',
+			designation:createProfile.experience.designationName,
+			description:createProfile.experience.expShortDescription,
+			approved:'yes'
+				};
+		$http.post('http://localhost:3000/evaluators/profileexperience', data) 
+			.success(
+				function(success){
+					console.log(success);
+				})
+			.error(
+				function(error){
+					console.log(error);
+				});
+		////////////////////////////////////////////////////////////////////////////////
+	
+		/////////////////////////////// Education ///////////////////
+			//fulltime:createProfile.education.fulltime,
+			//parttime:createProfile.education.parttime,
+			//distancelearning:createProfile.education.distance,
+			//fromyear:createProfile.education.fromYear,
+			//toyear:createProfile.education.toYear,
+		var data = {
+			emailid:createProfile.contactInfo.email,
+		    graduation:createProfile.education.graduation,
+			studytime:0,
+			specialization:createProfile.education.specialization,
+			university:createProfile.education.institute,
+			description:createProfile.education.eduShortDescription,
+			approved:'yes'
+				};
+		$http.post('http://localhost:3000/evaluators/profileeducation', data) 
+			.success(
+				function(success){
+					console.log(success);
+				})
+			.error(
+				function(error){
+					console.log(error);
+				});
+		////////////////////////////////////////////////////////////////////////////////
+
+	 // }
   }
    
   $scope.scrollTo = function(id) {

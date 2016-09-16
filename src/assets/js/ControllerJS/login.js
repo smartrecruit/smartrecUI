@@ -24,7 +24,7 @@ myapp.controller("LoginController",function($scope,$http,$state,$stateParams,$lo
 				var user=$scope.LoginDetails.username;			
 				//Auth.setUser(user);				
 				var data = {						
-						username:Login.username,						
+						emailid:Login.username,						
 						password:Login.password
 					};
 					$http.post('http://localhost:3000/evaluators/getuser', data) 
