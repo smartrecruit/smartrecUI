@@ -1,4 +1,19 @@
 var myapp = angular.module('myapp', ["ui.router"])
+myapp.controller("layoutController",function($scope,$http,dataShare){
+
+});
+
+myapp.controller("header_1",function($scope,$http,dataShare){
+           $scope.$on('data_shared',function(){
+      		 var data = dataShare.getData();
+					 $scope.sessionusername='';
+           $scope.sessionemail='';
+					// $scope.emailid=data;
+			
+});
+});
+
+
 myapp.config(function($stateProvider, $urlRouterProvider){
 
 $urlRouterProvider.otherwise('/home');

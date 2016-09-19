@@ -176,8 +176,8 @@
 					<div class="row">
 						<div class="col-sm-6">
 							<div class="form-group">
-								<label for="form-register-username">Username</label>
-								<input type="text" class="form-control" id="form-register-username" data-ng-model="accountRegistration.username">
+									<label for="form-register-first-name">First Name</label>
+									<input type="text" class="form-control" id="form-register-first-name" data-ng-model="accountRegistration.firstName">
 							</div><!-- /.form-group -->
 							<div class="form-group">
 								<label for="form-register-email">E-mail</label>
@@ -213,15 +213,12 @@
 						</div><!-- /.col-* -->
 						<div class="col-sm-6">
 							<div class="row">
-								<div class="form-group col-sm-6">
-									<label for="form-register-first-name">First Name</label>
-									<input type="text" class="form-control" id="form-register-first-name" data-ng-model="accountRegistration.firstName">
-								</div><!-- /.form-group -->
-								<div class="form-group col-sm-6">
+								<div class="col-md-12">
+							
 									<label for="form-register-surname">Surname</label>
 									<input type="text" class="form-control" id="form-register-surname" data-ng-model="accountRegistration.surname">
 								</div><!-- /.form-group -->
-							</div><!-- /.row -->
+					</div>
 							<div class="form-group">
 								<label form="form-register-photo">Profile Picture</label>
 								<!-- <input type="file" name="form-register-photo" id="form-register-photo" data-ng-model="accountRegistration.Profilepic" data-ng-change="selectFileforUpload(this.files)"> -->
@@ -251,4 +248,5 @@
     <script type="text/javascript" src="assets/libraries/bootstrap-select/js/bootstrap-select.min.js"></script>
     <script type="text/javascript" src="assets/libraries/bootstrap-wysiwyg/bootstrap-wysiwyg.min.js"></script>
     <script type="text/javascript" src="assets/js/main.js"></script>
+    <script type="text/javascript" src="assets/js/Directives/commonDirective.js"></script>
 	

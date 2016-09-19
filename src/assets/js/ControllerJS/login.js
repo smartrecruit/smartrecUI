@@ -1,4 +1,4 @@
-myapp.controller("LoginController",function($scope,$http,$state,$stateParams,$location){
+myapp.controller("LoginController",function($scope,$http,$state,$stateParams,$location,dataShare){
 	var loginType = $location.search()['id'];	
 	//alert(loginType);
 	if(loginType=='Candidate'){
@@ -27,13 +27,15 @@ myapp.controller("LoginController",function($scope,$http,$state,$stateParams,$lo
 						emailid:Login.username,						
 						password:Login.password
 					};
-					$http.post('http://localhost:3000/evaluators/getuser', data) 
+					$http.post('http://localhost:3018/evaluators/getuser', data) 
 						.success(
 							function(success){
 								var emailid=success.emailid;
 								var usertype=success.usertype;
 								if (usertype=='Candidate')
 								{
+            //dataShare.sendData(emailid);
+						dataShare.sendData(success);    
 								$state.go('Candidate');
 								}
 								else if (usertype=='Evaluator')
@@ -44,8 +46,7 @@ myapp.controller("LoginController",function($scope,$http,$state,$stateParams,$lo
 							})
 						.error(function(error){
 								$scope.err_login="Invalid Username and Password";
-							});
-			
+							});	
 			}			
 		}
 
@@ -70,7 +71,20 @@ myapp.controller("LoginController",function($scope,$http,$state,$stateParams,$lo
 	}
 });
 
-
+myapp.factory('dataShare',function($rootScope,$timeout){
+  var service = {};
+  service.data = false;
+  service.sendData = function(data){
+      this.data = data;
+      $timeout(function(){
+         $rootScope.$broadcast('data_shared');
+      },100);
+  };
+  service.getData = function(){
+    return this.data;
+  };
+  return service;
+});
 
 /* myapp.run(['$rootScope', '$location', 'Auth', function ($rootScope, $location, Auth) {
     $rootScope.$on('$routeChangeStart', function (event) {

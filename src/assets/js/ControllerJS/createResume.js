@@ -1,5 +1,13 @@
-myapp.controller('CreateResumeController', function($scope,$http, $location, $anchorScroll) {
+
+
+myapp.controller('CreateResumeController', function($scope,$http, $location, $anchorScroll,dataShare) {
  
+  $scope.$on('data_shared',function(){
+      var data = dataShare.getData();
+$scope.text='Manikandan';
+  })
+
+
   $scope.Clone=function(event){
 	var childDiv = angular.element( document.querySelector( '#test1' ) );
 	var parentDiv = angular.element( document.querySelector( '#test' ) );
@@ -118,7 +126,7 @@ myapp.controller('CreateResumeController', function($scope,$http, $location, $an
 		};
 		*/
 		//http://localhost:3000/evaluators/removeEvaluator/567  \\\\\\\\\ Delete the record \\\\\\\\\\\\\\\\\
-
+/*
 		/////////////////////////////// Contat Details Update ///////////////////
 		var data = {
 			emailid:createProfile.contactInfo.email,
@@ -139,13 +147,14 @@ myapp.controller('CreateResumeController', function($scope,$http, $location, $an
 					console.log(error);
 				});
 		////////////////////////////////////////////////////////////////////////////////	
+		*/
 		/////////////////////////////// Summary ///////////////////
 		var data = {
 			emailid:createProfile.contactInfo.email,
-			summary:createProfile.summary.notes,
+			summary:'This is my summary data',
 			approved:'yes'
 				};
-		$http.post('http://localhost:3000/evaluators/summaryinfo', data) 
+		$http.post('http://localhost:3018/evaluators/summaryinfo', data) 
 			.success(
 				function(success){
 					console.log(success);
@@ -155,6 +164,18 @@ myapp.controller('CreateResumeController', function($scope,$http, $location, $an
 					console.log(error);
 				});
 		////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+
+
+
+
+
+
+
+		/*
 		/////////////////////////////// Key Skills ///////////////////
 		var data = {
 			emailid:createProfile.contactInfo.email,
@@ -223,7 +244,7 @@ myapp.controller('CreateResumeController', function($scope,$http, $location, $an
 					console.log(error);
 				});
 		////////////////////////////////////////////////////////////////////////////////
-
+*/
 	 // }
   }
    
@@ -233,3 +254,20 @@ myapp.controller('CreateResumeController', function($scope,$http, $location, $an
     $anchorScroll();
   };
 });
+
+/*
+myapp.factory('dataShare',function($rootScope,$timeout){
+  var service = {};
+  service.data = false;
+  service.sendData = function(data){
+      this.data = data;
+      $timeout(function(){
+         $rootScope.$broadcast('data_shared');
+      },100);
+  };
+  service.getData = function(){
+    return this.data;
+  };
+  return service;
+});
+*/

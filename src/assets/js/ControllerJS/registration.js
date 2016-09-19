@@ -54,7 +54,7 @@ myapp.controller("RegistrationController",function($scope, $http,$location){
 			if(accountRegistration!=undefined){
 				$scope.Registration=accountRegistration;
 				var usertype=$scope.pagename;
-				if(accountRegistration.username && accountRegistration.email && accountRegistration.password && accountRegistration.rePassword && accountRegistration.firstName && accountRegistration.surname){
+				if( accountRegistration.email && accountRegistration.password && accountRegistration.rePassword && accountRegistration.firstName && accountRegistration.surname){
 					$scope.errorMessage="";				
 					var data = {
 						firstname:accountRegistration.firstName,
@@ -66,7 +66,7 @@ myapp.controller("RegistrationController",function($scope, $http,$location){
 					};
 					//http://localhost:3000/evaluators/removeEvaluator/567  \\\\\\\\\ Delete the record \\\\\\\\\\\\\\\\\
 					
-					$http.post('http://localhost:3000/evaluators/register', data) 
+					$http.post('http://localhost:3018/evaluators/register', data) 
 						.success(
 							function(success){
 							//	alert("success");
@@ -83,15 +83,15 @@ myapp.controller("RegistrationController",function($scope, $http,$location){
 				else{
 					//$scope.errorMessage="All fields are required";
 					
-					if((accountRegistration.email==undefined )&& (accountRegistration.username && accountRegistration.password && accountRegistration.rePassword && accountRegistration.firstName && accountRegistration.surname)){
+					if((accountRegistration.email==undefined )&& (accountRegistration.password && accountRegistration.rePassword && accountRegistration.firstName && accountRegistration.surname)){
 						$scope.errorMessage="Email should be valid.";
 						return;
 					}
-					if((accountRegistration.password==undefined)&& (accountRegistration.username && accountRegistration.email && accountRegistration.firstName && accountRegistration.surname)){
+					if((accountRegistration.password==undefined)&& ( accountRegistration.email && accountRegistration.firstName && accountRegistration.surname)){
 						$scope.errorMessage="Password should be in correct format.";
 						return;
 					}
-					if((accountRegistration.rePassword==undefined)&&(accountRegistration.username && accountRegistration.email && accountRegistration.password && accountRegistration.firstName && accountRegistration.surname)){
+					if((accountRegistration.rePassword==undefined)&&( accountRegistration.email && accountRegistration.password && accountRegistration.firstName && accountRegistration.surname)){
 						$scope.errorMessage="Retype Password should match with Password.";
 						return;
 					}
